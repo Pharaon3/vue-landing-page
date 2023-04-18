@@ -42,7 +42,7 @@
         <v-btn text @click="$vuetify.goTo('#features')">
           <span class="mr-2 iBWChl">Menu</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#download')">
+        <v-btn text @click="$vuetify.goTo('#dishes')">
           <span class="mr-2 iBWChl">Reservation</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#pricing')">

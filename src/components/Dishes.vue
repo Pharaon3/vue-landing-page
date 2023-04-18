@@ -1,5 +1,5 @@
 <template>
-  <section id="download">
+  <section id="dishes">
     <v-container fluid>
       <v-row align="center" justify="center">
         <v-col cols="10">
@@ -29,7 +29,7 @@
 </template>
 
 <style scoped>
-#download {
+#dishes {
   background-image: url("~@/assets/img/bgDownload.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -38,8 +38,8 @@
   height: 500px;
 }
 
-#download .container,
-#download .row {
+#dishes .container,
+#dishes .row {
   height: 100%;
 }
 </style>

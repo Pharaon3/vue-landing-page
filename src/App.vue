@@ -8,10 +8,10 @@
           <v-col cols="10">
             <v-row align="center" justify="center">
               <v-col cols="12" md="3">
-                <about />
+                <hierarchy />
               </v-col>
               <v-col cols="12" md="5">
-                <download />
+                <dishes />
               </v-col>
               <v-col cols="12" md="4">
                 <pricing />
@@ -44,8 +44,8 @@
 import navigation from "./components/Navigation";
 import foote from "./components/Footer";
 import home from "./components/HomeSection";
-import about from "./components/AboutSection";
-import download from "./components/DownloadSection";
+import hierarchy from "./components/Hierarchy";
+import dishes from "./components/Dishes";
 import pricing from "./components/PricingSection";
 import contact from "./components/ContactSection";
 
@@ -56,8 +56,8 @@ export default {
     navigation,
     foote,
     home,
-    about,
-    download,
+    hierarchy,
+    dishes,
     pricing,
     contact,
   },
