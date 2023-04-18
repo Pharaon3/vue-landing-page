@@ -1,69 +1,16 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/img/bgHero.jpg" height="750">
+    <v-parallax dark src="@/assets/img/background.webp" height="450">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold mb-4">Vuetify.js</h1>
-              <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur <br />
-                adipisicing elit. Maiores porro voluptatibus <br />
-                delectus nam optio harum!
-              </h1>
-              <v-btn
-                rounded
-                outlined
-                large
-                dark
-                @click="$vuetify.goTo('#features')"
-                class="mt-5"
-              >
-                Saiba mais
-                <v-icon class="ml-2">mdi-arrow-down</v-icon>
+              <h1 class="display-2 font-weight-bold mb-4">Restaurant Jannat</h1>
+              <h1 class="font-weight-light">Indian Restaurant in Puchheim</h1>
+              <v-btn color="white" large @click="$vuetify.goTo('#features')" class="mt-5">
+                <v-img src="@/assets/img/group.svg" />
+                Group Order
               </v-btn>
-              <div class="video d-flex align-center py-4">
-                <a @click.stop="dialog = true" class="playBut">
-                  <svg
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                    x="0px"
-                    y="0px"
-                    width="60px"
-                    height="60px"
-                    viewBox="0 0 213.7 213.7"
-                    enable-background="new 0 0 213.7 213.7"
-                    xml:space="preserve"
-                  >
-                    <polygon
-                      class="triangle"
-                      id="XMLID_18_"
-                      fill="none"
-                      stroke-width="7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      points="73.5,62.5 148.5,105.8 73.5,149.1 "
-                    />
-
-                    <circle
-                      class="circle"
-                      id="XMLID_17_"
-                      fill="none"
-                      stroke-width="7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      cx="106.8"
-                      cy="106.8"
-                      r="103.3"
-                    />
-                  </svg>
-                </a>
-                <p class="subheading ml-2 mb-0">Assista o vídeo</p>
-              </div>
             </v-col>
             <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
           </v-row>
@@ -73,59 +20,6 @@
         <v-img src="@/assets/img/borderWaves.svg" />
       </div>
     </v-parallax>
-    <v-container fluid id="features" class="mt-2">
-      <v-row align="center" justify="center">
-        <v-col cols="10">
-          <v-row align="center" justify="space-around">
-            <!-- <v-col cols="12" class="text-center">
-              <h1 class="font-weight-light display-2">Title</h1>
-              <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h1>
-            </v-col> -->
-            <v-col
-              cols="12"
-              sm="4"
-              class="text-center"
-              v-for="(feature, i) in features"
-              :key="i"
-            >
-              <v-hover v-slot:default="{ hover }">
-                <v-card
-                  class="card"
-                  shaped
-                  :elevation="hover ? 10 : 4"
-                  :class="{ up: hover }"
-                >
-                  <v-img
-                    :src="feature.img"
-                    max-width="100px"
-                    class="d-block ml-auto mr-auto"
-                    :class="{ 'zoom-efect': hover }"
-                  ></v-img>
-                  <h1 class="font-weight-regular">{{ feature.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1">
-                    {{ feature.text }}
-                  </h4>
-                </v-card>
-              </v-hover>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-dialog v-model="dialog" max-width="640px">
-      <v-card>
-        <youtube
-          :video-id="videoId"
-          @ready="ready"
-          @playing="playing"
-        ></youtube>
-      </v-card>
-    </v-dialog>
-    <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
-    </div>
   </section>
 </template>
 
@@ -218,15 +112,19 @@ export default {
         0% {
           transform: translateX(0);
         }
+
         30% {
           transform: translateX(-5px);
         }
+
         50% {
           transform: translateX(5px);
         }
+
         70% {
           transform: translateX(-2px);
         }
+
         100% {
           transform: translateX(0);
         }
@@ -258,6 +156,7 @@ export default {
 #hero {
   z-index: 0;
 }
+
 .svg-border-waves img {
   position: absolute;
   bottom: 0;

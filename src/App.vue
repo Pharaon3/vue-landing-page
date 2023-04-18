@@ -3,23 +3,27 @@
     <navigation :color="color" :flat="flat" />
     <v-main class="pt-0">
       <home />
-      <about />
-      <download />
-      <pricing />
+      <v-container fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="10">
+            <v-row align="center" justify="center">
+              <v-col cols="12" md="3">
+                <about />
+              </v-col>
+              <v-col cols="12" md="5">
+                <download />
+              </v-col>
+              <v-col cols="12" md="4">
+                <pricing />
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
       <contact />
     </v-main>
     <v-scale-transition>
-      <v-btn
-        fab
-        v-show="fab"
-        v-scroll="onScroll"
-        dark
-        fixed
-        bottom
-        right
-        color="secondary"
-        @click="toTop"
-      >
+      <v-btn fab v-show="fab" v-scroll="onScroll" dark fixed bottom right color="secondary" @click="toTop">
         <v-icon>mdi-arrow-up</v-icon>
       </v-btn>
     </v-scale-transition>
@@ -67,7 +71,7 @@ export default {
   created() {
     const top = window.pageYOffset || 0;
     if (top <= 60) {
-      this.color = "transparent";
+      this.color = "white";
       this.flat = true;
     }
   },
@@ -75,10 +79,10 @@ export default {
   watch: {
     fab(value) {
       if (value) {
-        this.color = "secondary";
+        this.color = "white";
         this.flat = false;
       } else {
-        this.color = "transparent";
+        this.color = "white";
         this.flat = true;
       }
     },
